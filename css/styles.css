@@ -19,17 +19,23 @@
 /* ------------------------------------------------ */
 
 
-/* -------- Week 1 Start Code -------- */
-/* -------- CSS Reset code start-------- */
-*, *::before, *::after
+/* -------- Week 2 Start Code -------- */
+
+/* =========================
+   1) Reset
+========================== */
+* /* *::before and *::after is redundant since the * element selects all elements*/
   {
     box-sizing: border-box;
   }
 
 /* Default margins removed */
-body
+
+/* ol is emitted as index.html does not currently have <ol> elements */
+body, ul /* Declares the elements to have margin of 0 */
   {
     margin: 0;
+    padding: 0; /* The padding is for ul/ */
   }
 
 /* Base Fonts with Inheritance */
@@ -40,14 +46,17 @@ img
   }
 
 /* Default list spacing removed */
-ul, ol
+
+/* Declaring margin and padding is redundant */
+/* ul, ol
 {
   margin: 0;
   padding: 0;
-}
-/* -------- CSS Reset code end -------- */
+} */
 
-/* -------- Base Style code start --------*/
+/* =========================
+   2) Base Styles
+========================== */
 /* Setting global text styles */
 body
 {
@@ -56,10 +65,11 @@ body
   line-height: 1.6;
   color: #222;
   background-color: #fff;
+  
 }
 
 /* Headings normalized to same style */
-h1, h2, h3, h4, h5, h6
+h1, h2, h3 /* h4 to h6 are not used in index.html */
 {
   margin: 0 0 0.5em;
   line-height: 1.2;
@@ -71,6 +81,21 @@ p
   margin: 0 0 1em;
 }
 
+/* Disable text stretching on large screens */
+.container /* Moved to Base Styles as it seems more fitting to put default width of textboxes here */
+{
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+/* =========================
+   3) Typography
+========================== */
+
+/* =========================
+   4) Links
+========================== */
 /* Basic links style */
 a
 {
@@ -83,12 +108,3 @@ a:hover
   text-decoration: underline;
 }
 
-/* Disable text stretching on large screens */
-.container
-{
-  max-width: 1200px;
-  margin-inline: auto;
-  padding: 1rem;
-}
-
-/* -------- Week 1 End Code -------- */

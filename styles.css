@@ -120,6 +120,6 @@ input:focus, textarea:focus
   color: #fff; /* Better contrast against background-color */
 }
 
-input::selection{
+input::selection, textarea::selection{
   background-color: #000; /* Changes selection color for better contrast */
 }

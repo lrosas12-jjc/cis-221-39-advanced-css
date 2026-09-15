@@ -18,6 +18,13 @@
 
 /* ------------------------------------------------ */
 
+/* Added for Module 4 */
+@font-face /* Comes first for applying the font across the HTML*/ 
+{
+  font-family: "Barlow";
+  src: url(Barlow-Regular.ttf);
+}
+
 
 /* -------- Week 2 Start Code -------- */
 
@@ -60,7 +67,7 @@ img
 /* Setting global text styles */
 body
 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Barlow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Barlow is displayed first; rest are fallback*/
   font-size: 16px;
   line-height: 1.6;
   color: #222;
@@ -71,14 +78,15 @@ body
 /* Headings normalized to same style */
 h1, h2, h3 /* h4 to h6 are not used in index.html */
 {
-  margin: 0 0 0.5em;
-  line-height: 1.2;
+  margin: 1em -0.5em 0.25em; /* Moved values for clarity*/
+  line-height: 1.2; /* Slightly lowered line-height for eye-scanning*/
 }
 
 /* Setting paragraph spacing */
 p
 {
   margin: 0 0 1em;
+  line-height: 1.25; /* Added line-height for readability */
 }
 
 /* Disable text stretching on large screens */
@@ -97,7 +105,7 @@ p
    4) Links
 ========================== */
 /* Basic links style */
-a
+a, main a:nth-child(n of section)
 {
   color: #0066cc;
   text-decoration: none;
@@ -108,3 +116,19 @@ a:hover
   text-decoration: underline;
 }
 
+/* Added for Module 3 */
+nav a:active, button:active
+{
+  text-shadow: -1px 1px 3px #0066cc77; /* When clicked, the text faintly glows to show that link/button is active*/
+}
+
+input:focus, textarea:focus
+{
+  background-color: #0066cc;
+  color: #fff; /* Better contrast against background-color */
+}
+
+input::selection, textarea::selection
+{
+  background-color: #000; /* Changes selection color for better contrast */
+}

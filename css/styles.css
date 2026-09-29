@@ -44,22 +44,11 @@ body, ul /* Declares the elements to have margin of 0 */
     margin: 0;
     padding: 0; /* The padding is for ul/ */
   }
-
-/* Base Fonts with Inheritance */
 img
   {
     max-width: 100%;
     display: block;
   }
-
-/* Default list spacing removed */
-
-/* Declaring margin and padding is redundant */
-/* ul, ol
-{
-  margin: 0;
-  padding: 0;
-} */
 
 /* =========================
    2) Base Styles
@@ -72,29 +61,44 @@ body
   line-height: 1.6;
   color: #222;
   background-color: #fff;
-  
+  margin: 1rem 0;
+  padding: 0 2rem;
 }
 
-/* Headings normalized to same style */
-h1, h2, h3 /* h4 to h6 are not used in index.html */
+li::marker
 {
-  margin: 1em -0.5em 0.25em; /* Moved values for clarity*/
-  line-height: 1.2; /* Slightly lowered line-height for eye-scanning*/
+  content: "";
 }
 
-/* Setting paragraph spacing */
-p
+/* Paragraphs, headings, containers normalized */
+h1, h2, h3, .card, .tile/* h4 to h6 are not used in index.html */
 {
-  margin: 0 0 1em;
-  line-height: 1.25; /* Added line-height for readability */
+  margin: 0.15rem 0 0.5rem;
+  padding: 0.2rem 0;
+  line-height: 1.25;
+}
+
+p, header, ul.bullets, .section
+{
+  margin: 0.1rem 0 1rem;
+}
+
+.section
+{
+    border-top: 0.2rem solid #000;
+}
+
+.section:last-child
+{
+  border: none;
 }
 
 /* Disable text stretching on large screens */
 .container /* Moved to Base Styles as it seems more fitting to put default width of textboxes here */
 {
+  margin: 2rem 0;
   max-width: 1200px;
   margin-inline: auto;
-  padding: 1rem;
 }
 
 /* =========================
@@ -105,7 +109,7 @@ p
    4) Links
 ========================== */
 /* Basic links style */
-a, main a:nth-child(n of section)
+a, article.tile a
 {
   color: #0066cc;
   text-decoration: none;
@@ -131,4 +135,16 @@ input:focus, textarea:focus
 input::selection, textarea::selection
 {
   background-color: #000; /* Changes selection color for better contrast */
+}
+
+textarea
+{
+  width: 100%;
+  resize: vertical;
+}
+
+section.donate
+{
+  border: 0.2rem solid #000;
+  padding: 0.2rem 1.2rem;
 }

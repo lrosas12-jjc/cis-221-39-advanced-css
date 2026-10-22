@@ -87,7 +87,8 @@ h1, h2, h3, .card, .tile/* h4 to h6 are not used in index.html */
 
 h1, h2, h3
 {
-  background-color: rgb(0, 102, 204, 0.25);
+  background: radial-gradient(ellipse at top, rgb(46, 150, 255) 1%, #9bcdff 80%);
+  border: solid 2px #0066cc;
 }
 
 .card, .tile
@@ -132,11 +133,24 @@ a, article.tile a
 {
   color: #0066cc;
   text-decoration: none;
+  text-align: center;
+  padding: 0 1rem 0.1rem;
+  border: #000 solid 1px;
 }
 
 a:hover
 {
   text-decoration: underline;
+  text-shadow: #07b5ef 1px 1px;
+  background-color: #9bcdff;
+  color: #fff;
+}
+
+nav ul li, .header-inner a, .skip-link a
+{
+  display: inline-block;
+  padding: 0.15rem 0.25rem 0 0;
+  width: 10rem;
 }
 
 /* Added for Module 3 */
@@ -166,4 +180,10 @@ section.donate
 {
   border: 0.2rem solid #000;
   padding: 0.2rem 1.2rem;
+}
+
+footer ul li
+{
+  display: inline-block;
+  padding: 0.15rem 0.25rem 0 0;
 }

@@ -47,7 +47,8 @@ body, ul /* Declares the elements to have margin of 0 */
 
 img
   {
-    max-width: 50%;
+    max-width: 100%;
+    height: auto;
     display: block;
     aspect-ratio: 18/13;
     margin: 1rem auto 0;
@@ -63,7 +64,7 @@ body
   font-size: 16px;
   line-height: 1.6;
   color: #222;
-  background-color: #fff;
+  /* background-color: #fff; */
   margin: 1rem 0;
   padding: 0 2rem;
   background: linear-gradient(to right, rgb(0,0,0,0) 95%, rgb(0, 102, 204) 100%); /* Simple right gradient, White is 90% for text readability*/
@@ -146,11 +147,17 @@ a:hover
   color: #fff;
 }
 
+a:focus-visible, article.tile a:focus-visible
+{
+  border: #07b5ef 4px solid;
+  background-color: #0066cc;
+  color: #fff;
+}
+
 nav ul li, .header-inner a, .skip-link a
 {
   display: inline-block;
-  padding: 0.15rem 0.25rem 0 0;
-  width: 10rem;
+  padding: 0.15rem 0 0;
 }
 
 /* Added for Module 3 */

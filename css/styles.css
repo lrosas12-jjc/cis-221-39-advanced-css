@@ -157,7 +157,7 @@ a:focus-visible, article.tile a:focus-visible
 nav ul li, .header-inner a, .skip-link a
 {
   display: inline-block;
-  padding: 0.15rem 0 0;
+  padding: 0.15rem 0;
 }
 
 /* Added for Module 3 */
@@ -193,4 +193,24 @@ footer ul li
 {
   display: inline-block;
   padding: 0.15rem 0.25rem 0 0;
+}
+
+.footer-links
+{
+  background-color: #fff;
+  border: #000 solid 2px;
+  padding: 0 0.2rem 0.2rem;
+  margin: -0.25rem 0;
+  position: fixed;
+  bottom: 0.33rem;
+  right: 0.1rem;
+}
+
+.skip-link
+{
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  right: 3rem;
+  top: 0.1rem;
 }

@@ -183,6 +183,14 @@ textarea
   resize: vertical;
 }
 
+.section, .hero
+
+{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 section.donate
 {
   border: 0.2rem solid #000;
@@ -203,7 +211,8 @@ footer ul li
   margin: -0.25rem 0;
   position: fixed;
   bottom: 0.33rem;
-  right: 0.1rem;
+  right: 0;
+  max-width: 320px;
 }
 
 .skip-link
@@ -211,6 +220,24 @@ footer ul li
   display: inline-block;
   background-color: #fff;
   position: absolute;
-  right: 3rem;
+  right: 0;
   top: 0.1rem;
+}
+
+.header-inner
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 720px) 
+{
+  .header-inner
+  {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
